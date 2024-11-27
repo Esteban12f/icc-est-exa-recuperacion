@@ -101,6 +101,8 @@ public class PersonaController {
 
     public void programa1(Persona[] personas){
                 sortAgeBySelection(personas);
+                System.out.println("Arreglo de personas ordenado por edades:");
+                printArreglo(personas);
                 int resultado = binarioEdad(personas, 25);
                 int resultado2 = binarioEdad(personas, 70);
                 System.out.println("Edad a buscar 25:");
@@ -112,6 +114,8 @@ public class PersonaController {
                 System.out.println("");
 
                 sortNameByInsertion(personas);
+                System.out.println("Arreglo de personas ordenado por nombres:");
+                printArreglo(personas);
                 int resultado3 = binarioNombre(personas, "Anais");
                 int resultado4 = binarioNombre(personas, "Miguel");
                 System.out.println("Nombre a bucar Anais: ");

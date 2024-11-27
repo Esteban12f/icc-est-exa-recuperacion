@@ -1,4 +1,5 @@
 
+import Controllers.PersonaController;
 import Models.Persona;
 
 public class App {
@@ -61,5 +62,26 @@ public class App {
                 // Si encontró a la persona en el arreglo de personas los datos de dicha persona
                 // y su posición
                 // Si no encontró a la persona en el arreglo de personas
+
+
+                PersonaController controlador = new PersonaController();
+                controlador.sortAgeBySelection(personas);
+                int resultado = controlador.binarioEdad(personas, 25);
+                int resultado2 = controlador.binarioEdad(personas, 70);
+                System.out.println("Edad a buscar 25:");
+                controlador.validacion(personas, resultado);
+                System.out.println("Edad a buscar 70: ");
+                controlador.validacion(personas, resultado2);
+
+                System.out.println("");
+                System.out.println("");
+
+                controlador.sortNameByInsertion(personas);
+                int resultado3 = controlador.binarioNombre(personas, "Anais");
+                int resultado4 = controlador.binarioNombre(personas, "Miguel");
+                System.out.println("NOmbre a bucar Anais: ");
+                controlador.validacion(personas, resultado3);
+                System.out.println("Nombre a buscar Miguel:");
+                controlador.validacion(personas, resultado4);
         }
 }

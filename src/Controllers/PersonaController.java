@@ -97,4 +97,26 @@ public class PersonaController {
             printObjeto(personas, resultado);
      }
     }
+
+
+    public void programa1(Persona[] personas){
+                sortAgeBySelection(personas);
+                int resultado = binarioEdad(personas, 25);
+                int resultado2 = binarioEdad(personas, 70);
+                System.out.println("Edad a buscar 25:");
+                validacion(personas, resultado);
+                System.out.println("Edad a buscar 70: ");
+                validacion(personas, resultado2);
+
+                System.out.println("");
+                System.out.println("");
+
+                sortNameByInsertion(personas);
+                int resultado3 = binarioNombre(personas, "Anais");
+                int resultado4 = binarioNombre(personas, "Miguel");
+                System.out.println("Nombre a bucar Anais: ");
+                validacion(personas, resultado3);
+                System.out.println("Nombre a buscar Miguel:");
+                validacion(personas, resultado4);
+    }
 }
